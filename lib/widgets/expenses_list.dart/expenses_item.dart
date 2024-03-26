@@ -7,6 +7,7 @@ class ExpensesItem extends StatelessWidget {
   final Expense expense;
   @override
   Widget build(BuildContext context) {
+
     return Card(
       child: Padding(
           padding: const EdgeInsets.symmetric(
@@ -25,11 +26,11 @@ class ExpensesItem extends StatelessWidget {
                   const Spacer(),
                   Row(
                     children: [
-                      const Icon(Icons.alarm),
+                      Icon(categoryIcons[expense.category]),
                       const SizedBox(
                         height: 8,
                       ),
-                      Text(expense.date.toString()),
+                      Text(expense.formattedDate),
                     ],
                   ),
                 ],
